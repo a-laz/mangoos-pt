@@ -1,0 +1,120 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base navbar styles */
+.navbar {
+  background-color: white;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.navbar-logo img {
+  width: 100px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #764ba2;
+}
+
+.book-button {
+  background-color: #764ba2;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: white !important;
+  transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #8557b5;
+}
+
+/* Always show hamburger on mobile */
+.hamburger {
+  display: none; /* Hidden by default */
+}
+
+/* Hamburger styles */
+.hamburger .bar {
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  margin: 4px 0;
+  display: block;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide nav links by default on mobile */
+  }
+  
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .nav-links li {
+    margin: 8px 0;
+    text-align: center;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+}

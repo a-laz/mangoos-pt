@@ -1,0 +1,175 @@
+.book-page {
+  min-height: 100vh;
+  padding-top: 120px;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  ),
+  url('../assets/queens.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.book-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.book-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.book-header h1 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+}
+
+.book-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-info {
+  padding-right: 40px;
+  border-right: 1px solid #eee;
+}
+
+.booking-info h2 {
+  color: #764ba2;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.booking-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.booking-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.booking-info li i {
+  color: #764ba2;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  width: 24px;
+}
+
+.contact-info {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.contact-info h3 {
+  color: #764ba2;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-button {
+  background-color: #764ba2;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #663d8e;
+}
+
+@media (max-width: 968px) {
+  .booking-container {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-info {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-content {
+    padding: 20px;
+  }
+
+  .booking-container {
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .book-header h1 {
+    font-size: 2rem;
+  }
+}
