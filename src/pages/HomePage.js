@@ -6,6 +6,7 @@ import foot from '../assets/foot.jpg';
 import knee from '../assets/knee.jpg';
 import stretch from '../assets/stretch.jpg';
 import { Link } from 'react-router-dom';
+import ServicesPage from './ServicesPage';
 
 function HomePage() {
   const carouselSettings = {
@@ -71,8 +72,10 @@ function HomePage() {
         </div>
       </section>
 
+      <ServicesPage />
+
       {/* Features Section */}
-      <section className="features">
+     {/*  <section className="features">
         <h2>Our Specializations</h2>
         <div className="feature-grid">
           <div className="feature-card">
@@ -109,7 +112,7 @@ function HomePage() {
         <Link to="/services">
           <button className="services-button">See our services</button>
         </Link>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="footer">
