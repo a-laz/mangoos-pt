@@ -62,7 +62,7 @@ function HomePage() {
             </div>
             <div className="phone">
               <i className="fas fa-phone"></i>
-              <p>(347) 642-3043</p>
+              <a href="tel:+13476423043">(347) 642-3043</a>
             </div>
             <div className="location">
               <i className="fas fa-map-marker-alt"></i>
