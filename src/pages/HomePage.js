@@ -66,7 +66,7 @@ function HomePage() {
             </div>
             <div className="location">
               <i className="fas fa-map-marker-alt"></i>
-              <p>27-53 Crescent St.,<br />BASEMENT<br />Astoria, NY 11102</p>
+              <p>27-53 Crescent St.,<br />Lower Level<br />Astoria, NY 11102</p>
             </div>
           </div>
         </div>
