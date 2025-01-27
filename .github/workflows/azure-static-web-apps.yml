@@ -21,12 +21,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
           
-      - name: Install Dependencies
+      - name: Install Global Dependencies
         run: |
+          npm install -g @actions/core@1.6.0
+          npm install -g @actions/http-client
           npm install -g @azure/static-web-apps-cli
-          npm ci
+        
+      - name: Install Project Dependencies
+        run: |
+          npm cache clean --force
+          rm -rf node_modules package-lock.json
+          npm install --legacy-peer-deps
         
       - name: Build And Deploy
         id: builddeploy
@@ -41,7 +47,6 @@ jobs:
         env:
           NODE_VERSION: '18'
           CI: false
-          NPM_CONFIG_LEGACY_PEER_DEPS: true
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
