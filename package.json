@@ -7,6 +7,8 @@
     "npm": ">=9.x"
   },
   "dependencies": {
+    "@actions/core": "1.6.0",
+    "@actions/http-client": "^2.2.0",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
