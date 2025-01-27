@@ -1,12 +1,7 @@
 import React from 'react';
-import Slider from 'react-slick';
 import '../style/HomePage.css';
 import Navbar from '../components/Navbar';
-import foot from '../assets/foot.jpg';
-import knee from '../assets/knee.jpg';
-import stretch from '../assets/stretch.jpg';
 import { Link } from 'react-router-dom';
-import ServicesPage from './ServicesPage';
 
 function HomePage() {
   const carouselSettings = {
