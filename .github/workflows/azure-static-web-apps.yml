@@ -16,6 +16,18 @@ jobs:
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install Dependencies
+        run: |
+          npm install -g @azure/static-web-apps-cli
+          npm ci
+        
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -29,6 +41,7 @@ jobs:
         env:
           NODE_VERSION: '18'
           CI: false
+          NPM_CONFIG_LEGACY_PEER_DEPS: true
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
