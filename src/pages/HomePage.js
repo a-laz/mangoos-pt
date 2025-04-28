@@ -58,7 +58,7 @@ function HomePage() {
           <div className="hero-info">
             <div className="hours">
               <i className="fas fa-clock"></i>
-              <p>Monday - Friday: 10AM - 6PM<br />Early and late appointments<br /> available upon request</p>
+              <p>Monday - Friday: 10AM - 6PM<br />Closed on Wednesdays<br />Early and late appointments<br /> available upon request</p>
             </div>
             <div className="phone">
               <i className="fas fa-phone"></i>
